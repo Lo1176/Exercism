@@ -8,7 +8,7 @@ To get started with TDD, see the `README.md` file in your
 
 class Gigasecond
   GIGASECOND = 1e9
-  # 1e9 is quicker to execute than 10**10
+  # 1e9 is quicker to execute than 10**9
   def self.from(date)
     date + GIGASECOND
   end
