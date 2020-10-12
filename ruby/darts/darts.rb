@@ -19,14 +19,14 @@ class Darts
     # Centre(0, 0)
     # x²+y² = R²
     target = x**2 + y**2
-    if target <= 1
-      10
-    elsif target <= 25 && target > 1
-      5
-    elsif target <= 100 && target > 25
-      1
-    else
+    if target > 100
       0
+    elsif target > 25
+      1
+    elsif target > 1
+      5
+    else
+      10
     end
   end
 end
