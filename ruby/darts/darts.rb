@@ -21,9 +21,9 @@ class Darts
     target = x**2 + y**2
     if target <= 1
       10
-    elsif target <= 5 && target > 1
+    elsif target <= 25 && target > 1
       5
-    elsif target <= 10 && target > 5
+    elsif target <= 100 && target > 25
       1
     else
       0
