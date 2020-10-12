@@ -12,6 +12,19 @@ class Microwave
     @time = time
   end
 
+  # the cleaver way :
+  # -----------------------
+  # attr_reader :time
+  # def initialize(sequence)
+  #   # format the sequence in a digital number with 4 dizaines 0000
+  #   i = format('%04d', sequence)
+  #   sec = i[2..3].to_i % 60
+  #   min = i[2..3].to_i / 60 + i[0..1].to_i
+  #   # min:sec in %02d format
+  #   @timer = '%02d:%02d'%[min, sec]
+  # end
+  # -----------------------
+
   def timer
     time < 100 ? small_time : big_time
   end
