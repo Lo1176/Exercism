@@ -6,3 +6,10 @@ To get started with TDD, see the `README.md` file in your
 `ruby/pangram` directory.
 =end
 
+# a 'Pangram' is a sentence using every letter of the alphabet at least once.
+class Pangram
+  ALPHABET = ('a'..'z').to_a
+  def self.pangram?(sentence)
+    sentence.chars.reject { |w| w == ' ' }.uniq.sort == ALPHABET
+  end
+end
