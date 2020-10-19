@@ -1,8 +1,11 @@
 =begin
-Write your code for the 'Acronym' exercise in this file. Make the tests in
-`acronym_test.rb` pass.
+Convert a phrase to its acronym.
 
-To get started with TDD, see the `README.md` file in your
-`ruby/acronym` directory.
+like Portable Network Graphics to its acronym (PNG).
 =end
 
+class Acronym
+  def self.abbreviate(phrase)
+
+  end
+end
