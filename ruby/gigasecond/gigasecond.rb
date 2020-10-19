@@ -1,14 +1,7 @@
-=begin
-Write your code for the 'Gigasecond' exercise in this file. Make the tests in
-`gigasecond_test.rb` pass.
-
-To get started with TDD, see the `README.md` file in your
-`ruby/gigasecond` directory.
-=end
-
+# Calculate the moment when someone has lived for 10^9 seconds.
 class Gigasecond
-  GIGASECOND = 1e9
-  # 1e9 is quicker to execute than 10**9
+  GIGASECOND = 10**9
+  # 10**9 is faster to execute than 1e9
   def self.from(date)
     date + GIGASECOND
   end
