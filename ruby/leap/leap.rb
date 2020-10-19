@@ -1,8 +1,27 @@
 =begin
-Write your code for the 'Leap' exercise in this file. Make the tests in
-`leap_test.rb` pass.
+Given a year, report if it is a leap year.
 
-To get started with TDD, see the `README.md` file in your
-`ruby/leap` directory.
+The tricky thing here is that a leap year in the Gregorian calendar occurs:
+
+```text
+on every year that is evenly divisible by 4
+  except every year that is evenly divisible by 100
+    unless the year is also evenly divisible by 400
+```
+
+For example, 1997 is not a leap year, but 1996 is.  1900 is not a leap
+year, but 2000 is.
 =end
 
+# class Year
+class Year
+  def self.leap?(date)
+    if (date % 400).zero?
+      true
+    elsif (date % 100).zero?
+      false
+    else
+      (date % 4).zero?
+    end
+  end
+end
