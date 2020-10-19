@@ -16,12 +16,6 @@ year, but 2000 is.
 # class Year
 class Year
   def self.leap?(date)
-    if (date % 400).zero?
-      true
-    elsif (date % 100).zero?
-      false
-    else
-      (date % 4).zero?
-    end
+    (date % 4).zero? && (!(date % 100).zero? || (date % 400).zero?)
   end
 end
