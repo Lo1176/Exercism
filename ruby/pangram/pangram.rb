@@ -10,6 +10,6 @@ To get started with TDD, see the `README.md` file in your
 class Pangram
   ALPHABET = ('a'..'z').to_a
   def self.pangram?(sentence)
-    sentence.chars.reject { |w| w == ' ' }.uniq.sort == ALPHABET
+    sentence.downcase.chars.reject { |w| w =~ /\W|\d|_/ }.uniq.sort == ALPHABET
   end
 end
