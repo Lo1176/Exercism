@@ -6,6 +6,6 @@ like Portable Network Graphics to its acronym (PNG).
 
 class Acronym
   def self.abbreviate(phrase)
-    phrase.split(/\W/).reject { |w| w == ' ' }.map { |word| word[0] }.join.upcase
+    phrase.scan(/\b\w/).join.upcase
   end
 end
