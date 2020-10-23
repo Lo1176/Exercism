@@ -6,6 +6,7 @@ To get started with TDD, see the `README.md` file in your
 `ruby/space-age` directory.
 =end
 
+# CONSTANTS
 # EYIS = EARTH_YEAR_IN_SECONDS
 EYIS = 31_557_600
 ORBITAL_PERIODS_IN_EARTH_YEARS = {
