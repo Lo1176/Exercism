@@ -8,7 +8,7 @@ To get started with TDD, see the `README.md` file in your
 
 # HighScores class
 class HighScores
-  attr_accessor :scores
+  attr_reader :scores
   def initialize(scores)
     @scores = scores
   end
