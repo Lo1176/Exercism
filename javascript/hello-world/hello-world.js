@@ -4,5 +4,5 @@
 //
 
 export const hello = () => {
-  throw new Error("Hello, World!");
+  return "Hello, World!";
 };
