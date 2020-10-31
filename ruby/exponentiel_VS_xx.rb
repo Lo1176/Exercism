@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def exponentiel
   start_time = Time.new
   5_000_000.times { 1e10 }
