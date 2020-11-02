@@ -1,20 +1,11 @@
-=begin
-Write your code for the 'High Scores' exercise in this file. Make the tests in
-`high_scores_test.rb` pass.
-
-To get started with TDD, see the `README.md` file in your
-`ruby/high-scores` directory.
-=end
+# frozen_string_literal: true
 
 # HighScores class
 class HighScores
   attr_reader :scores
+
   def initialize(scores)
     @scores = scores
-  end
-
-  def list_of_scores
-    scores
   end
 
   def latest
@@ -30,6 +21,6 @@ class HighScores
   end
 
   def latest_is_personal_best?
-    latest >= personal_top_three[0]
+    latest == personal_best
   end
 end
