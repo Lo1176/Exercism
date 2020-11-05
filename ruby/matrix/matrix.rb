@@ -16,6 +16,12 @@ class Matrix
   end
 
   def columns
-    rows.map(&:first)
+    col = []
+    i = 0
+    while i < rows.first.size
+      col << rows.map { |row| row[i] }
+      i += 1
+    end
+    col
   end
 end
