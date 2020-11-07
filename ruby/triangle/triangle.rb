@@ -11,4 +11,8 @@ class Triangle
   def equilateral?
     mesure.nil? ? false : mesure.uniq.size == 1
   end
+
+  def isosceles?
+    mesure.nil? ? false : mesure.uniq.size <= 2
+  end
 end
