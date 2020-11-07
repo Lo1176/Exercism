@@ -9,10 +9,16 @@ class Triangle
   end
 
   def equilateral?
-    mesure.nil? ? false : mesure.uniq.size == 1
+    (mesure.nil? ? false : mesure.uniq.size == 1)
   end
 
   def isosceles?
-    mesure.nil? ? false : mesure.uniq.size <= 2
+    (mesure.nil? ? false : mesure.uniq.size <= 2) if triangle_inequality?
+  end
+
+  private
+
+  def triangle_inequality?
+    mesure.max < mesure.min(2)[0] + mesure.min(2)[1]
   end
 end
