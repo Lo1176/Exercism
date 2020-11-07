@@ -9,7 +9,7 @@ class Triangle
   end
 
   def equilateral?
-    (mesure.nil? ? false : mesure.uniq.size == 1)
+    mesure.nil? ? false : mesure.uniq.size == 1
   end
 
   def isosceles?
@@ -23,6 +23,6 @@ class Triangle
   private
 
   def triangle_inequality?
-    mesure.max < mesure.min(2)[0] + mesure.min(2)[1]
+    mesure.max <= mesure.min(2)[0] + mesure.min(2)[1]
   end
 end
