@@ -16,6 +16,10 @@ class Triangle
     (mesure.nil? ? false : mesure.uniq.size <= 2) if triangle_inequality?
   end
 
+  def scalene?
+    mesure.uniq.size == 3 if triangle_inequality?
+  end
+
   private
 
   def triangle_inequality?
