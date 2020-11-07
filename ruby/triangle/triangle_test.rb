@@ -117,8 +117,13 @@ class TriangleTest < Minitest::Test
     assert triangle.scalene?, "Expected 'true', triangle [0.5, 0.4, 0.6] is scalene."
   end
 
-  def test_degenerate_triangle
+  def test_degenerate_triangle_if_the_max_side_equals_the_sum_of_the_other_two
     triangle = Triangle.new([4, 2, 2])
     assert triangle.degenerate_triangle?, "Expected 'true', triangle [4, 2, 2] is a degenerate triangle"
+  end
+
+  def test_triangle_is_not_a_degenerate_triangle_if_the_max_side_is_not_equal_to_the_sum_of_the_other_two
+    triangle = Triangle.new([4, 3, 2])
+    refute triangle.degenerate_triangle?, "Expected 'false', triangle [4, 2, 2] is a degenerate triangle"
   end
 end
