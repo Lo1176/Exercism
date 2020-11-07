@@ -5,7 +5,10 @@ class Triangle
   attr_reader :mesure
 
   def initialize(mesure)
-    @mesure = mesure
+    instance_variable_set(:@mesure, mesure) unless mesure.include?(0)
   end
 
+  def equilateral?
+    mesure.nil? ? false : mesure.uniq.size == 1
+  end
 end
