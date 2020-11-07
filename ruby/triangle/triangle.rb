@@ -20,9 +20,13 @@ class Triangle
     mesure.uniq.size == 3 if triangle_inequality?
   end
 
+  def degenerate_triangle?
+    mesure.max == mesure.min(2)[0] + mesure.min(2)[1]
+  end
+
   private
 
   def triangle_inequality?
-    mesure.max <= mesure.min(2)[0] + mesure.min(2)[1]
+    mesure.max < mesure.min(2)[0] + mesure.min(2)[1]
   end
 end

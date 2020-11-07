@@ -116,4 +116,9 @@ class TriangleTest < Minitest::Test
     triangle = Triangle.new([0.5, 0.4, 0.6])
     assert triangle.scalene?, "Expected 'true', triangle [0.5, 0.4, 0.6] is scalene."
   end
+
+  def test_degenerate_triangle
+    triangle = Triangle.new([4, 2, 2])
+    assert triangle.degenerate_triangle?, "Expected 'true', triangle [4, 2, 2] is a degenerate triangle"
+  end
 end
