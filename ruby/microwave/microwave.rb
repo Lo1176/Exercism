@@ -1,11 +1,6 @@
-=begin
-Write your code for the 'Microwave' exercise in this file. Make the tests in
-`microwave_test.rb` pass.
 
-To get started with TDD, see the `README.md` file in your
-`ruby/microwave` directory.
-=end
 
+# A Microwave Class which convert the buttons entered on the microwave panel to their timer equivalent.
 class Microwave
   attr_reader :time
   def initialize(time)
