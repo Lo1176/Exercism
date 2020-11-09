@@ -5,6 +5,6 @@
 
 export const gigasecond = (date) => {
   const GIGASECOND = new Date(Math.pow(10, 8)) ;
-  return (Math.pow(date, 10) + GIGASECOND);
+  return (date + GIGASECOND);
 
 };
