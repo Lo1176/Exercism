@@ -43,11 +43,7 @@ class Microwave
 
   def big_time
     seconds = "#{time.to_s[-2]}#{time.to_s[-1]}"
-    if time.to_s[-4].nil?
-      minutes = "0#{time.to_s[-3]}"
-    else
-      minutes = "#{time.to_s[-4]}#{time.to_s[-3]}"
-    end
+    minutes = time.to_s[-4].nil? ? "0#{time.to_s[-3]}" : "#{time.to_s[-4]}#{time.to_s[-3]}"
     "#{minutes}:#{seconds}"
   end
 end
