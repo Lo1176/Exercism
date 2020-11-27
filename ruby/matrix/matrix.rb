@@ -10,18 +10,12 @@ class Matrix
 
   def rows
     matrix_of_number
-      .split("\n")
+      .lines
       .map { |string| string.split(' ') }
       .map { |ary| ary.map(&:to_i) }
   end
 
   def columns
-    col = []
-    i = 0
-    while i < rows.first.size
-      col << rows.map { |row| row[i] }
-      i += 1
-    end
-    col
+    rows.transpose
   end
 end
