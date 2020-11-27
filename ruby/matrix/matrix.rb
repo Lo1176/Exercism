@@ -11,7 +11,7 @@ class Matrix
   def rows
     matrix_of_number
       .lines
-      .map { |string| string.split }
+      .map(&:split)
       .map { |ary| ary.map(&:to_i) }
   end
 
